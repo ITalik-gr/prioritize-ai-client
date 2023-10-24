@@ -1,4 +1,6 @@
 import { NewTask } from "./components/NewTask/NewTask";
+import { TaskList } from "./components/TaskList/TaskList";
+import { TasksInfo } from "./components/TasksInfo/TasksInfo";
 
 
 export default function Home() {
@@ -27,6 +29,8 @@ export default function Home() {
       </header>
       <div className="container max-w-5xl	">
         <NewTask />
+        <TasksInfo />
+        <TaskList />
       </div>
     </main>
   )
