@@ -1,9 +1,10 @@
+import { NewTask } from "./components/NewTask/NewTask";
 
 
 export default function Home() {
   return (
     <main>
-      <header className="header">
+      <header className="header bg-gray-700 py-20">
         <a href="#" className="header-logo flex justify-center items-center">
           <svg className="flex items-center w-6" xmlns="http://www.w3.org/2000/svg" width="22" height="36" viewBox="0 0 22 36" fill="none">
     <g clip-path="url(#clip0_43_111)">
@@ -25,7 +26,7 @@ export default function Home() {
         </a>
       </header>
       <div className="container max-w-5xl	">
-        <h1>Pri</h1>
+        <NewTask />
       </div>
     </main>
   )
