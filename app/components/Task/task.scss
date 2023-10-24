@@ -1,5 +1,55 @@
 @import '../../styles/base.scss';
 
 .task {
-  
+  display: flex;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid $Gray-400;
+  background: $Gray-500;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  &-check {
+    span {
+      border-radius: 100%;
+      display: flex;
+      background-color: transparent;
+      border: 2px solid #4EA8DE;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+    &__complete {
+      display: none;
+    }
+  }
+  &-text {
+    margin-left: 12px;
+    color: $Gray-100;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+  }
+  &-delete {
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  &-complete {
+    .task {
+      &-check {
+        &__complete {
+          display: flex;
+        }
+        span {
+          background-color: #5E60CE;
+          border: 2px solid #5E60CE;
+        }
+      }
+      &-text {
+        color: $Gray-300;
+        p {
+          text-decoration-line: line-through;
+        }
+      }
+    }
+  }
 }
