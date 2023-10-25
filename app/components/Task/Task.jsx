@@ -30,6 +30,7 @@ export const Task = () => {
             alt='Delere Task'
             className='task-delete__image'
           />
+
       </div>
 
     </div>
