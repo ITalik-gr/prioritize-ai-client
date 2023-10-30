@@ -1,9 +1,19 @@
+'use client'
+
 import { NewTask } from "./components/NewTask/NewTask";
 import { TaskList } from "./components/TaskList/TaskList";
 import { TasksInfo } from "./components/TasksInfo/TasksInfo";
-
+import { SessionProvider } from "next-auth/react"
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+
+  const { data } = useSession()
+  // const data = await getServerSession(authOptions)
+
+  console.log(data)
   return (
     <main>
       <header className="header bg-gray-700 py-20">
